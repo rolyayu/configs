@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: order_routes
+              uri: http://localhost:8081
+              predicates:
+                - Path=/orders/**
+server:
+  port: 8080
