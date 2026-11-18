@@ -6,7 +6,7 @@ spring:
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
     topic:
       name: order_topics
-    propeties:
+    properties:
       schema.registry.url: http://localhost:8091
 
 server:
