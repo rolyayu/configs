@@ -6,3 +6,6 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
     topic:
       name: order_topics
+
+server:
+  port: 8081
