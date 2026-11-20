@@ -3,6 +3,3 @@ spring:
     bootstrap-servers: kafka1:19092,kafka2:19092,kafka3:19092
     properties:
       schema.registry.url: http://schema-registry:8081
-
-server:
-  port: 8081

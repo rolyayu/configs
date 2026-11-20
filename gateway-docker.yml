@@ -8,5 +8,3 @@ spring:
               uri: http://order-service:8081
               predicates:
                 - Path=/orders/**
-server:
-  port: 8080
