@@ -2,15 +2,10 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
     consumer:
+      group-id: stock-service-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JacksonJsonDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
     topic:
       name: order_topics
     properties:
-      spring:
-        json:
-          trusted:
-            packages: *
-
-server:
-  port: 0
+      schema.registry.url: http://localhost:8091
