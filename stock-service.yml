@@ -9,3 +9,6 @@ spring:
       name: order_topics
     properties:
       schema.registry.url: http://localhost:8091
+      specific:
+        avro:
+          reader: true
