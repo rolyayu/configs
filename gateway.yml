@@ -9,4 +9,4 @@ spring:
               predicates:
                 - Path=/orders/**
 server:
-  port: 8080
+  port: 8812
