@@ -2,8 +2,12 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
     producer:
+      acks: all
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        enable.idempotence: true
+        max.in.flight.requests.per.connection: 5
     topic:
       name: order_topics
     properties:
